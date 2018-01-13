@@ -2,14 +2,16 @@
 new Vue({
     el:'#vue-app',
     data:{
-        name:'hanhan',
-        job:'web fe',
-        website:'http://www.baidu.com',
-        websiteTag:'<a href="http://www.baidu.com"> baidu </a>',
+        age:30,
+        x: 0,
+        y: 0,
     },
     methods:{
-        greet: function(time){
-            return 'Good '+ time + ' ' + this.name +'!'
+        logName:function(){
+            console.log('111')
+        },
+        logAge:function(){
+            console.log('222')
         }
     },
 })

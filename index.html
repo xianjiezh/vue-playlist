@@ -10,12 +10,11 @@
 </head>
 <body>
     <div id="vue-app">
-        <h1>{{ greet('afternoon') }}</h1>
-        <p>Name:{{name}}</p>
-        <p>Job:{{job}}</p>
-        <a v-bind:href="website">web dev</a>
-        <input type="text" v-bind:value="job">
-        <p v-html="websiteTag"></p>
+        <h1>键盘 Events</h1>
+        <label>姓名</label>
+        <input type="text" v-on:keyup.alt.enter="logName">
+        <label>年龄</label>
+        <input type="text" v-on:keyup.alt.enter="logAge">
     </div>
     <script src="app.js"></script>
 
