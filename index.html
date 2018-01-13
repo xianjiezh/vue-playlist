@@ -10,11 +10,13 @@
 </head>
 <body>
     <div id="vue-app">
-        <h1>键盘 Events</h1>
+        <h1> 双向数据绑定 </h1>
         <label>姓名</label>
-        <input type="text" v-on:keyup.alt.enter="logName">
+        <input ref="name" type="text" v-model="name">
+        <span>{{name}}</span>
         <label>年龄</label>
-        <input type="text" v-on:keyup.alt.enter="logAge">
+        <input ref="age" type="text" v-model="age">
+        <span>{{age}}</span>
     </div>
     <script src="app.js"></script>
 
