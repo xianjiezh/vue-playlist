@@ -2,16 +2,26 @@
 new Vue({
     el:'#vue-app',
     data:{
-        age:'age',
-        name:'name',
+        a:0,
+        b:0,
+        age:20
     },
-    methods:{
-        logName:function(){
-            // console.log('111')
-            // this.name = this.$refs.name.value
+    // methods:{
+    //     addToA: function(){
+    //         return this.a + this.age
+    //     },
+    //     addToB:function(){
+    //         return this.b + this.age
+    //     }
+    // },
+    computed:{
+        addToA: function(){
+            console.log('a')
+            return this.a + this.age
         },
-        logAge:function(){
-            // this.age = this.$refs.age.value
+        addToB:function(){
+            console.log('b')
+            return this.b + this.age
         }
     },
 })

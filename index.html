@@ -10,13 +10,13 @@
 </head>
 <body>
     <div id="vue-app">
-        <h1> 双向数据绑定 </h1>
-        <label>姓名</label>
-        <input ref="name" type="text" v-model="name">
-        <span>{{name}}</span>
-        <label>年龄</label>
-        <input ref="age" type="text" v-model="age">
-        <span>{{age}}</span>
+        <h1> Computed 计算属性</h1>
+        <button v-on:click="a++">add to a</button>
+        <button v-on:click="b++">add to b</button>
+        <p>A - {{a}}</p>
+        <p>B - {{b}}</p>
+        <p>Age + A = {{addToA}}</p>
+        <P>Age + B = {{addToB}}</P>
     </div>
     <script src="app.js"></script>
 
