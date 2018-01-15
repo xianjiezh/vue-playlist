@@ -1,19 +1,18 @@
 
 new Vue({
-    el:'#vue-app',
+    el:"#vue-app",
     data:{
-        changeColor: true,
-        changeLength: false,
+        characters:['Mario', 'Luffy', 'Yoshi'],
+        users:[
+            {name:'henry',age:30},
+            {name:'Bucky',age:25},
+            {name:'Emily',age:18}
+        ],
     },
     methods:{
 
     },
     computed:{
-        compClasses: function(){
-            return {
-                changeColor:this.changeColor,
-                changeLength:this.changeLength,
-            }
-        }
-    },
+
+    }
 })

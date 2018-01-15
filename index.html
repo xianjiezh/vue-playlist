@@ -12,17 +12,32 @@
 
 <body>
     <div id="vue-app">
-        <h1> 动态CSS class</h1>
-        <h2> 实例 1</h2>
-        <!-- <div v-on:click="changeColor = !changeColor" v-bind:class="{changeColor:changeColor}">
-            <span>henry</span>
-        </div> -->
-        <h2> 实例 2</h2>
-        <button v-on:click="changeColor = !changeColor">change color</button>
-        <button v-on:click="changeLength = !changeLength">change length</button>
-        <div v-bind:class="compClasses">
-            <span>henry</span>
-        </div>
+        <!-- <h1> v-for </h1>
+        {{characters[0]}}
+        {{characters[1]}}
+        {{characters[2]}} -->
+
+        <ul>
+            <li v-for="character in characters">
+                {{character}}
+            </li>
+        </ul>
+        <ul>
+            <li v-for="(user,index) in users">
+                {{index}} . {{user.name}} - {{user.age}}
+            </li>
+        </ul>
+        <template v-for="(user,index) in users">
+            <h3>{{index}} . {{user.name}} </h3>
+            <p>Age - {{user.age}}</p>
+        </template>
+        <template v-for="(user,index) in users">
+            <div v-for="(val,key) in user">
+                <p>
+                    {{key}} - {{val}}
+                </p>
+            </div>
+        </template>
     </div>
     <script src="app.js"></script>
 
