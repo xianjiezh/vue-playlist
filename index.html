@@ -12,32 +12,17 @@
 
 <body>
     <div id="vue-app">
-        <!-- <h1> v-for </h1>
-        {{characters[0]}}
-        {{characters[1]}}
-        {{characters[2]}} -->
 
-        <ul>
-            <li v-for="character in characters">
-                {{character}}
-            </li>
-        </ul>
-        <ul>
-            <li v-for="(user,index) in users">
-                {{index}} . {{user.name}} - {{user.age}}
-            </li>
-        </ul>
-        <template v-for="(user,index) in users">
-            <h3>{{index}} . {{user.name}} </h3>
-            <p>Age - {{user.age}}</p>
-        </template>
-        <template v-for="(user,index) in users">
-            <div v-for="(val,key) in user">
-                <p>
-                    {{key}} - {{val}}
-                </p>
-            </div>
-        </template>
+        <div id="bag" v-bind:class="{burst:end}"></div>
+
+        <div id="bagHealth">
+            <div v-bind:style="{width: health + '%',transition: 'all .3s'}"></div>
+        </div>
+
+        <div id="controls">
+            <button v-on:click="reduce" v-show="!end">使劲敲</button>
+            <button v-on:click="restart">重新开始</button>
+        </div>
     </div>
     <script src="app.js"></script>
 

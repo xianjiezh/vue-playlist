@@ -1,16 +1,21 @@
 
 new Vue({
-    el:"#vue-app",
+    el:'#vue-app',
     data:{
-        characters:['Mario', 'Luffy', 'Yoshi'],
-        users:[
-            {name:'henry',age:30},
-            {name:'Bucky',age:25},
-            {name:'Emily',age:18}
-        ],
+        health:100,
+        end:false,
     },
     methods:{
-
+        reduce:function(){
+            this.health -= 10
+            if (this.health <= 0){
+                this.end = !this.end
+            }
+        },
+        restart:function(){
+            this.health = 100
+            this.end = !this.end
+        }
     },
     computed:{
 
